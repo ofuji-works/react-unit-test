@@ -1,8 +1,8 @@
-import { FC } from "react";
-import { useCounter } from "../hooks";
+import { FC } from "react"
+import { useCounter } from "../hooks"
 
 export const Counter: FC = () => {
-  const { count, increase, decrease } = useCounter();
+  const { count, increase, decrease } = useCounter()
 
   return (
     <div>
@@ -10,5 +10,5 @@ export const Counter: FC = () => {
       <p>{count}</p>
       <button onClick={decrease}>-</button>
     </div>
-  );
-};
+  )
+}
