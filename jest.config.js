@@ -1,4 +1,9 @@
 module.exports = {
+    globals: {
+        "ts-jest": {
+          tsconfig: './tsconfig.test.json'
+        }
+    },
     rootDir: '__tests__',
     cacheDirectory: '<rootDir>/.cache',
     collectCoverage: true,
@@ -13,7 +18,9 @@ module.exports = {
     coverageDirectory: '<rootDir>/.coverage',
     setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
     testEnvironment: 'jsdom',
-    transform: {"^.+\\.[jt]sx?$": "babel-jest"},
+    transform: {
+        "^.+\\.(ts|tsx)$": "ts-jest"
+      },
     transformIgnorePatterns: ['node_modules'],
     verbose: true
 }
