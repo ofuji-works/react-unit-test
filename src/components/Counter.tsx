@@ -6,9 +6,13 @@ export const Counter: FC = () => {
 
   return (
     <div>
-      <button onClick={increase}>+</button>
+      <button aria-label="add" onClick={increase}>
+        +
+      </button>
       <p>{count}</p>
-      <button onClick={decrease}>-</button>
+      <button aria-label="substract" onClick={decrease}>
+        -
+      </button>
     </div>
   )
 }
